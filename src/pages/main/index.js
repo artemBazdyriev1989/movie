@@ -20,7 +20,6 @@ export const MainPage = ({
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log(movies, page);
     if (!movies[page]) {
       Api.getNowPlayng(page).then((data) => {
         dispatch(setPage(page, data.results));
